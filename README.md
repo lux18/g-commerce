@@ -10,6 +10,8 @@ Sebuah Aplikasi E-Commerce berbasis web yang responsive yang dibuat menggunakan 
 - Collection : Daftar produk
 - Produk Detail : Informasi detail produk yang dipilih dari Collection
 - Cart : Keranjang belanja
+- Payment : Pembayaran (menggunakan kripto)
+- Wallet : Dompet digital (kripto)
 
 #### Website Admin
 - Autentikasi : login, logout dan register
@@ -17,7 +19,7 @@ Sebuah Aplikasi E-Commerce berbasis web yang responsive yang dibuat menggunakan 
 - Edit Produk : Edit Informasi Produk yang akan ditampilkan
 - Category list : Daftar category
 - Edit Category : Edit Informasi category yang akan ditampilkan
-
+- Wallet : Dompet digital (kripto)
 
 
 # Tech
