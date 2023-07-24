@@ -5,11 +5,12 @@ import EditCategory from '../components/admin/category/EditCategory';
 import AddProduct from '../components/admin/AddProduct';
 import ViewProduct from '../components/admin/ViewProduct';
 import EditProduct from '../components/admin/EditProduct';
+import Dashboard from '../components/admin/Dashboard';
 
 
 
 const routes = [
-    { path: '/admin', exact: true, name: 'Admin' },
+    { path: '/admin/dashboard', exact: true, name: 'Admin', component: Dashboard },
     { path: '/admin/add-category', exact: true, name: 'Category', component: Category },
     { path: '/admin/view-category', exact: true, name: 'ViewCategory', component: ViewCategory },
     { path: '/admin/profile', exact: true, name: 'Profile', component: Profile },

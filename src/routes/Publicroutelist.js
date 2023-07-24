@@ -1,5 +1,6 @@
 import Home from '../components/frontend/Home'
 import About from '../components/frontend/About'
+import Account from '../components/frontend/Account'
 import Contact from '../components/frontend/Contact'
 import Login from '../components/frontend/auth/Login'
 import Register from '../components/frontend/auth/Register'
@@ -9,6 +10,8 @@ import ViewCategory from '../components/frontend/collections/ViewCategory'
 import ViewProduct from '../components/frontend/collections/ViewProduct'
 import ProductDetail from '../components/frontend/collections/ProductDetail'
 import Cart from '../components/frontend/Cart'
+import Checkout from '../components/frontend/Checkout'
+
 
 
 
@@ -16,6 +19,7 @@ import Cart from '../components/frontend/Cart'
 const publicroutesList = [
     { path: '/', exact: true, name: 'Home', component: Home },
     { path: '/about', exact: true, name: 'About', component: About },
+    { path: '/account', exact: true, name: 'About', component: Account },
     { path: '/contact', exact: true, name: 'Contact', component: Contact },
     { path: '/403', exact: true, name: 'Page403', component: Page403 },
     { path: '/404', exact: true, name: 'Page404', component: Page404 },
@@ -25,6 +29,7 @@ const publicroutesList = [
     { path: '/collections/:slug', exact: true, name: 'ViewProduct', component: ViewProduct },
     { path: '/collections/:category/:product', exact: true, name: 'ProductDetail', component: ProductDetail },
     { path: '/cart', exact: true, name: 'Cart', component: Cart },
+    { path: '/checkout', exact: true, name: 'Cart', component: Checkout },
 
 
 

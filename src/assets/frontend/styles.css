@@ -389,6 +389,41 @@ body{
       background: rgba(0, 0, 0, 0.5) !important;
     }
 
+    .labelCheckout{
+      font-size: 12px;
+    }
+
+    .cardCheckout{
+      box-shadow:4px 4px 8px 0px rgb(240, 206, 219),-4px -4px 8px 0px rgba(255, 255, 255, 0.803);
+      border: none;
+      background-color: transparent;
+    }
+
+
+    .boxCheckout{
+      max-height: 350px;
+      overflow: auto;
+      font-size: 12px;
+      padding: 10px;
+  
+  }
+  .boxCheckout::-webkit-scrollbar {
+      width: 4px;
+      background-color: #cecece92;
+    }
+    
+    .boxCheckout::-webkit-scrollbar-thumb {
+      background-color: #e88bad92;
+      border-radius: 5px;
+  
+    }
+    
+    .boxCheckout::-webkit-scrollbar-thumb:hover {
+      background-color: #e88bade0;
+    }
+  
+  
+
 
 
 

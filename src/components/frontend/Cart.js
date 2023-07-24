@@ -31,7 +31,8 @@ function Cart() {
                     setLoading(false);
                     const total = calculateTotalCartPrice(res.data.cart);
                     setGrandTotal(total);
-
+                    // const filteredCart = res.data.cart.filter(item => item.product.qyt > 0);
+                    // setCart(filteredCart);
                 }
                 else if (res.data.status === 401) {
                     history.push('/');
@@ -50,22 +51,28 @@ function Cart() {
     useEffect(() => {
         const total = calculateTotalCartPrice(cart);
         setGrandTotal(total);
+
     }, [cart]);
 
 
     const handleDecrement = (cart_id) => {
         setCart(cart =>
             cart.map((item) =>
-                cart_id === item.id ? { ...item, product_qyt: item.product_qyt - (item.product_qyt > 1 ? 1 : 0) } : item));
-        updateCartQuantity(cart_id, "dec")
+                cart_id === item.id ? { ...item, product_qyt: Math.max(item.product_qyt - 1, 0) } : item
+            )
+        );
+        updateCartQuantity(cart_id, "dec");
     };
-
     const handleIncrement = (cart_id) => {
-        setCart(cart =>
-            cart.map((item) =>
-                cart_id === item.id ? { ...item, product_qyt: item.product_qyt + (item.product_qyt < item.product.qyt ? 1 : 0) } : item));
-        updateCartQuantity(cart_id, "inc")
-
+        const cartItem = cart.find(item => item.id === cart_id);
+        if (cartItem && cartItem.product_qyt < cartItem.product.qyt) {
+            setCart(cart =>
+                cart.map((item) =>
+                    cart_id === item.id ? { ...item, product_qyt: Math.min(item.product_qyt + 1, item.product.qyt) } : item
+                )
+            );
+            updateCartQuantity(cart_id, "inc");
+        }
     };
 
     function updateCartQuantity(cart_id, scope) {
@@ -74,6 +81,7 @@ function Cart() {
             }
         })
     }
+
 
 
     const deleteCartItem = (e, cart_id) => {
@@ -98,6 +106,8 @@ function Cart() {
             }
         });
     }
+
+
 
     const calculateTotalCartPrice = (cart) => {
         let total = 0;
@@ -187,7 +197,7 @@ function Cart() {
                         <p className="text-white">Grand Total :</p>
                         <h4 className="text-white mt-1">Rp {numeral(grandTotal).format('0,0')}</h4>
                         <hr style={{ color: 'white' }} className="m-0 my-2" />
-                        <button className="btn btn-sm btnCout mt-1">Checkout</button>
+                        <Link to="/checkout" className="btn btn-sm btnCout mt-1">Checkout</Link>
 
                     </div>
 
