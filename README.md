@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# G-Commerce
+Sebuah Aplikasi E-Commerce berbasis web yang responsive yang dibuat menggunakan framework React.js (frontend), Laravel (backend) dan Mysql (database).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+#### Website E-Commerce (untuk pengguna)
+- Autentikasi : login, logout dan register
+- Collection : Daftar produk
+- Produk Detail : Informasi detail produk yang dipilih dari Collection
+- Cart : Keranjang belanja
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Website Admin
+- Autentikasi : login, logout dan register
+- Product list : Daftar produk
+- Edit Produk : Edit Informasi Produk yang akan ditampilkan
+- Category list : Daftar category
+- Edit Category : Edit Informasi category yang akan ditampilkan
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Tech
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Basic
+- HTML
+- CSS
+- Javascript
+- PHP
+- Axios (API)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Framework
+- React.js (javascript)
+- Node.js (javascript)
+- Laravel (PHP)
+- Bootstrap - UI (javascript,CSS)
+- Swiper.js - UI (javascript)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Database
+- Mysql
 
-### `npm run eject`
+#### Tools
+- Visual Studio Code - Digunakan untuk menulis kode program
+- XAMPP - Digunakan untuk menjalankan server lokal
+- Git - Digunakan untuk menginstal paket, menyimpan ke repositori, update ke repositori
+- Figma - Digunakan untuk mengambar perencanaan desain UI dan prototype
+- Postman - Digunakan untuk pengecekan API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### 1. Download Kode
+- Pilih main branches lalu download code zip
+- Extract kode
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### 2. Install XAMPP
+- Aktifkan Apache dan MySQL
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##### 3. Install Git
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+##### 4. Install node.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+##### 5. Aktifkan server lokal pada Laravel
+- Buka direktori file g-commerce-main > laravelreactapi
+- Klik kanan lalu buka dengan Gitbash
+- Untuk mengaktifkan server lokal masukan perintah
+```sh
+$ php artisan serve
+```
+- Untuk membuka kode masukan perintah
+```sh
+$ code .
+```
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Usage
 
-### `npm run build` fails to minify
+- Buka direktori file g-commerce-main
+- Klik kanan lalu buka dengan Gitbash
+- Untuk membuka project masukan perintah
+```sh
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
